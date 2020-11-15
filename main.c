@@ -13,7 +13,6 @@
 #define MAX_INPUT_LENGTH 15
 #define MAX_ARGUMENTS 20
 #define MAX_ARGUMENT_LENGTH 15
-#define DEBUG_MODE 0
 
 #if defined(WIN32) || defined(_WIN32) || defined(__WIN32__) || defined(__NT__)
 #   error "Cannot compile for windows"
@@ -35,7 +34,7 @@ void signal_handler (int sigNumber)
 {
   if (sigNumber == SIGUSR1)
   {
-    printf("Recebi um SIGUSR1, pressione Enter para retornar ao início...\n");
+    printf("Sinal SIGUSR1 recebido\n");
     interrupt = true;
   }
 }
