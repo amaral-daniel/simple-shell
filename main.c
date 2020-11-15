@@ -60,7 +60,7 @@ int main(void)
     //variable....
     if (signal(SIGUSR1, signal_handler) == SIG_ERR)
     {
-      printf("Não é possível SIGUSR1");
+      printf("Não é possível ligar SIGUSR1\n");
       exit(-1);
     }
 
@@ -104,7 +104,7 @@ int main(void)
 
     while(1)
     {
-      printf("Quantos argumentos voce quer digitar?");
+      printf("Quantos argumentos voce quer digitar?\n");
       fgets(nArgRaw,sizeof(nArgRaw),stdin);
       removeNewLine(nArgRaw);
       printf("Número de argumentos: %s\n",nArgRaw);
